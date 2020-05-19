@@ -1,0 +1,41 @@
+Pgm -> kwdprog brace1 Slist brace2
+
+Slist -> Stmt semi Slist
+Slist -> ''
+
+Stmt -> Print
+Stmt -> id equal Expr
+
+Print -> kwdprint paren1 Elist paren2
+
+Y1 -> E
+Y1 -> kwdinput
+
+Elist -> E Elist2
+Elist -> ''
+
+Elist2 -> comma Elist
+Elist2 -> ''
+
+E -> T X1
+X1 -> Opadd T X1
+X1 -> ''
+
+T -> F X2
+X2 -> Opmul F X2
+X2 -> ''
+
+F -> DType
+F -> paren1 E paren2
+
+DType -> id
+DType -> int
+DType -> float
+DType-> string
+
+Opadd -> plus
+Opadd -> minus
+
+Opmul -> aster
+Opmul -> slash
+Opmul -> caret

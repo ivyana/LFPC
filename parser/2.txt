@@ -1,0 +1,6 @@
+prog { // Find the area of a square.
+print( "Input edge length: " );
+x = input;
+area = x * x;
+print( "Area = ", area ),
+}
